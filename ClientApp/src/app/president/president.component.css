@@ -1,0 +1,31 @@
+.light_green {
+    background-color: lightgreen;
+}
+
+.light_blue {
+  background-color: lightskyblue;
+}
+
+.light_orange {
+  background-color: lightyellow;
+}
+h2 {
+  color: aqua;
+}
+
+img {
+  border: solid 2px #fff;
+}
+
+.titleBar {
+  color: #fff;
+  background-color: darkcyan;
+  font: bold 14px arial;
+  display: block;
+  height: 20px;
+  text-align: center;
+}
+
+.mybox {
+  width: unset;
+}

@@ -1,0 +1,20 @@
+h2 {
+  color: aqua;
+}
+
+img {
+  border: solid 2px #fff;
+}
+
+.titleBar {
+  color: #fff;
+  background-color: darkcyan;
+  font: bold 14px arial;
+  display: block;
+  height: 20px;
+  text-align: center;
+}
+
+.mybox {
+  width: unset;
+}

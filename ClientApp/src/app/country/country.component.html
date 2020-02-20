@@ -1,0 +1,47 @@
+<h1 id="tableLabel">Country List</h1>
+
+<p>The Country List.</p>
+
+<div *ngIf="!country"><em>Loading...</em></div>
+
+<div *ngIf="country">
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Country</th>
+        <th>Capital</th>
+        <th>Area</th>
+        <th>Population</th>
+        <th>GDP</th>
+        <th></th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of country | paginate: config">
+        <td>{{c.id}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.capital}}</td>
+        <td>{{c.area | number}}</td>
+        <td>{{c.population | number}}</td>
+        <td>{{c.gdp | currency}}</td>
+        <td><img src="../img/img_flag_{{c.id}}.jpg" /></td>
+        <td>{{c.description}}</td>
+        <td><img src="../img/img_map_{{c.id}}.jpg" /></td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+  <!--<div id="nation" [hidden]="!showMe">
+    <div>
+      <h4>{{nation.name}} Description</h4><p>{{nation.description}}</p>
+      <figure style="display:inline-block"><img src="~/img/img_flag_{{nation.id}}.jpg" /><figcaption>{{nation.name}} Flag</figcaption></figure>
+      <figure style="display:inline-block"><img src="~/img/img_map_{{nation.id}}.jpg" /><figcaption>{{nation.name}} Map</figcaption></figure>
+    </div>
+    <div>
+      <div><button (click)="goBack()">Go back</button></div>
+    </div>
+  </div>-->
+</div>

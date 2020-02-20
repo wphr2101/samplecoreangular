@@ -1,0 +1,31 @@
+<h1 id="tableLabel">2020 President Election</h1>
+
+<p>The result of 2020 President Election.</p>
+
+<p *ngIf="!president"><em>Loading...</em></p>
+
+<table class='table' aria-labelledby="tableLabel" *ngIf="president">
+  <thead>
+    <tr>
+      <th>縣市</th>
+      <th>宋楚瑜</th>
+      <th>韓國瑜</th>
+      <th>蔡英文</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of president | paginate: config" [ngClass]="[p.candidate3Votes >= p.candidate2Votes ? p.candidate3Votes >= p.candidate1Votes ? 'light_green' : 'light_orange' : p.candidate2Votes >= p.candidate1Votes ? 'light_blue' : 'light_orange']">
+      <td>{{ p.city }}</td>
+      <td>{{ p.candidate1Votes | number }}</td>
+      <td>{{ p.candidate2Votes | number }}</td>
+      <td>{{ p.candidate3Votes | number }}</td>
+    </tr>
+    <tr style="background-color:darkgrey;border: 1px solid #333;">
+      <td>{{ '總和' }}</td>
+      <td>{{ getTotalCount(1) | number }}</td>
+      <td>{{ getTotalCount(2) | number }}</td>
+      <td>{{ getTotalCount(3) | number }}</td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
