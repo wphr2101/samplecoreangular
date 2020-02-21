@@ -1,0 +1,32 @@
+h2 {
+  color: aqua;
+}
+
+img {
+  border: solid 2px #fff;
+}
+
+.titleBar {
+  color: #fff;
+  background-color: darkcyan;
+  font: bold 14px arial;
+  display: block;
+  height: 20px;
+  text-align: center;
+}
+
+.mybox {
+  width: unset;
+}
+
+.flag {
+    width: 150px;
+    border: 1px solid #666;
+    padding: 1px;
+}
+
+.map {
+  width: 250px;
+  border: 1px dotted #666;
+  padding: 2px;
+}

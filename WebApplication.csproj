@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\app\nation\" />
     <Folder Include="ClientApp\src\app\president\" />
   </ItemGroup>
 

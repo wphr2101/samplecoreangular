@@ -1,0 +1,36 @@
+<h1 id="tableLabel">Nation Information</h1>
+
+<p>The Information about {{nation.name}}</p>
+
+<div *ngIf="!nation"><em>Loading...</em></div>
+
+<div *ngIf="nation">
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <tr>
+      <th>ID</th>
+      <th>Country</th>
+      <th>Capital</th>
+      <th>Area</th>
+      <th>Population</th>
+      <th>GDP</th>
+    </tr>
+    <tr>
+      <td>{{nation.id}}</td>
+      <td>{{nation.name}}</td>
+      <td>{{nation.capital}}</td>
+      <td>{{nation.area | number}}</td>
+      <td>{{nation.population | number}}</td>
+      <td>{{nation.gdp | currency}}</td>
+    </tr>
+    <tr>
+      <th>National Flag</th>
+      <th colspan="4">Description</th>
+      <th>Map</th>
+    </tr>
+    <tr>
+      <td><img src="assets/img/img_flag_{{nation.id}}.jpg" class="flag" /></td>
+      <td colspan="4">{{nation.description}}</td>
+      <td><img src="assets/img/img_map_{{nation.id}}.jpg" class="map" /></td>
+    </tr>
+  </table>
+</div>

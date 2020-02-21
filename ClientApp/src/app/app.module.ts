@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { PresidentComponent } from './president/president.component';
 import { CountryComponent } from './country/country.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { NationComponent } from './nation/nation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CounterComponent,
     FetchDataComponent,
     PresidentComponent,
-    CountryComponent
+    CountryComponent,
+    NationComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

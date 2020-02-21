@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NationComponent } from '../nation/nation.component';
 
 @Component({
   selector: 'app-country',
@@ -8,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CountryComponent {
   public country: Country[];
+  public nation: Country;
   public currentPage: number;
   public pageSize: number;
   public numberOfPages: number;
@@ -25,6 +27,10 @@ export class CountryComponent {
   }
   pageChanged(event) {
     this.config.currentPage = event;
+    this.nation = null;
+  }
+  getSingleNation(n) {
+    this.nation = this.country[n-1];
   }
 }
 
