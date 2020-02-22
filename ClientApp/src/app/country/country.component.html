@@ -18,7 +18,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let c of country | paginate: config">
-        <td><button (click)="getSingleNation(c.id)">{{c.id}}</button></td>
+        <td><button class="btn btn-primary" (click)="getSingleNation(c.id)">{{c.id}}</button></td>
         <td>{{c.name}}</td>
         <td>{{c.capital}}</td>
         <td>{{c.area | number}}</td>
