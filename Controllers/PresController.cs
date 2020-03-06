@@ -264,26 +264,6 @@ namespace WebApplication.Controllers
                 Candidate3Votes = 1226,
             };
             presidents.Add(peLienchiang);
-            //int Sum1 = 0;
-            //int Sum2 = 0;
-            //int Sum3 = 0;
-            //foreach (var p in presidents)
-            //{
-            //    Sum1 += p.Candidate1Votes;
-            //    Sum2 += p.Candidate2Votes;
-            //    Sum3 += p.Candidate3Votes;
-            //}
-            //PresidentElection peSum = new PresidentElection
-            //{
-            //    City = "總和",
-            //    Candidate1Name = "宋楚瑜",
-            //    Candidate1Votes = Sum1,
-            //    Candidate2Name = "韓國瑜",
-            //    Candidate2Votes = Sum2,
-            //    Candidate3Name = "蔡英文",
-            //    Candidate3Votes = Sum3,
-            //};
-            //presidents.Add(peSum);
 
             return presidents;
         }

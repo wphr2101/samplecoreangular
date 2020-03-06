@@ -4,6 +4,9 @@
     "outDir": "../out-tsc/app",
     "module": "commonjs",
     "target": "es5",
+    "lib": [
+      "es6" // Or "es2015" or "es6" should work as well
+    ],
     "types": [
       "jasmine",
       "jasminewd2",

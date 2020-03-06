@@ -1,0 +1,8 @@
+<h1>2020 Elections in Taiwan</h1>
+
+<button class="btn btn-primary" style="margin: 2px 5px;" (click)="selectTab(1)">總統選舉</button>
+<button class="btn btn-primary" style="margin: 2px 5px;" (click)="selectTab(2)">立委選舉</button>
+
+<app-president *ngIf="showPres"></app-president>
+
+<app-legislative *ngIf="showLegis"></app-legislative>

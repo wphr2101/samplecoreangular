@@ -1,0 +1,28 @@
+<h3 id="tableLabel">2020 Legislative Election</h3>
+
+<p>The result of 2020 Legislative Election.</p>
+
+<p *ngIf="!legis"><em>Loading...</em></p>
+<table class='table' aria-labelledby="tableLabel" *ngIf="legis">
+  <thead>
+    <tr>
+      <th>選舉區</th>
+      <th>號次</th>
+      <th>姓名</th>
+      <th>政黨</th>
+      <th>得票數</th>
+      <th>當選與否</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let l of legis | paginate: config">
+      <td>{{ l.cityDistrict }}</td>
+      <td>{{ l.candidateNumber }}</td>
+      <td>{{ l.candidateName }}</td>
+      <td>{{ l.party }}</td>
+      <td>{{ l.votes | number }}</td>
+      <td>{{ (l.elect)?'是':'否' }}</td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
